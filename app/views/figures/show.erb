@@ -1,13 +1,12 @@
-<!-- need person name
-need person landmark -->
-
 <h1>Person Name</h1>
 
 <h3><a href="/figures/<%=@figure.id%>"><%= @figure.name %></a></h3><br>
 
 <ul>
 <h3>Landmarks:</h3>
+
 <%@figure.landmarks.each do |landmark|%>
+
 <li><%=landmark.name%></li>
 <% end %>
 </ul>
@@ -21,3 +20,5 @@ need person landmark -->
 
 <br>
 <a class="button" href="/">Home</a>
+<br><br>
+<a class="button" href="/figures/<%=@figure.id%>/edit">Click to Edit a Figure</a>
